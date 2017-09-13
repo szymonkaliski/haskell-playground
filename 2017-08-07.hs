@@ -1,4 +1,3 @@
-
 module Learn where
 
 -- http://learnyouahaskell.com/types-and-typeclasses .. http://learnyouahaskell.com/syntax-in-functions (Guards, guards!)

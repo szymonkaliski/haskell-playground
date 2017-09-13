@@ -1,6 +1,6 @@
 module Learn where
 
---  http://learnyouahaskell.com/modules .. http://learnyouahaskell.com/modules (Data.Char)
+-- http://learnyouahaskell.com/modules .. http://learnyouahaskell.com/modules (Data.Char)
 
 import Data.List
 
@@ -40,6 +40,4 @@ import Data.List
 -- `union` does union on two lists (returns set - no repeating items)
 -- `intersect` does set intersection
 -- `insert` tries to insert element in sorted array
-
-import Data.Char
 
