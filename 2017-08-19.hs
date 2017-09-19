@@ -4,7 +4,7 @@ import System.IO
 import System.IO.Error
 import Control.Exception
 
--- http://learnyouahaskell.com/input-and-output (Command line arguments) .. http://learnyouahaskell.com/functionally-solving-problems
+-- http://learnyouahaskell.com/input-and-output (Command line arguments) .. http://learnyouahaskell.com/functionally-solving-problems (skipped) .. http://learnyouahaskell.com/functors-applicative-functors-and-monoids
 
 main1 = do
   args <- getArgs
