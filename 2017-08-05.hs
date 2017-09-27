@@ -19,7 +19,7 @@ doubleSmall x = if x > 100 then x else x * 2
 numbersList = [2, 3, 4, 5]
 
 -- numbersList ++ [6] - works
--- numbersList ++ ['6'] - doesn't works
+-- numbersList ++ ['6'] - doesn't work
 -- 5: numbersList - cons, faster than concat
 -- numbersList !! 2 - get third element (4)
 
