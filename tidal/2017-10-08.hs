@@ -13,5 +13,5 @@ d1 $ sound "{arpy bass2 drum notes can}%2"
 d1 $ sometimes (0.5 <~) $ sound "bd*2 cp*2 hh sn"
 --                  ^ `<~` and `~>` move samples in time
 
-d1 $ ("[0 0.2 0.1 0.8 0.4]/16" <~)$ sound "bd*2 cp*2 hh sn"
+d1 $ ("[0 0.2 0.1 0.8 0.4]/16" <~) $ sound "bd*2 cp*2 hh sn"
 --    ^ moving in time can be used with a pattern
