@@ -16,6 +16,7 @@ diagram :: Diagram B
 --   where el = circle 1 # scaleX 0.2 # rotateBy (2/3)
 
 -- `snug`* functions allow items to be aligned based on their actual shape (in conjuction with `<>`)
+-- `<>` should be the same as `atop`...
 
 -- available transformations:
 -- * `scale`, `scaleX`, `scaleY`
