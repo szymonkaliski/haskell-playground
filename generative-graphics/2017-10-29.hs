@@ -38,8 +38,9 @@ type Position = (Double, Double)
 data Turtle = Turtle Position Main.Angle deriving Show
 type TurtleStatus = (Turtle, [Diagram B], Stack Turtle)
 
-stepDistance = 1
-turnAngle = 30
+stepDistance = 0.1
+turnAngle = 100
+numIterations = 4
 
 getPosition :: Turtle -> Position
 getPosition (Turtle p _) = p
@@ -55,7 +56,7 @@ moveForward ((Turtle (x, y) angle), ds, st) = ((Turtle (nx, ny) angle), ds, st)
 drawLineAndMoveForward :: TurtleStatus -> TurtleStatus
 drawLineAndMoveForward (t, ds, st) = (nt, d:ds, nst)
   where (nt, _, nst) = moveForward (t, ds, st)
-        d = fromVertices $ map p2 [(getPosition t), (getPosition nt)]
+        d = lw 0.6 fromVertices $ map p2 [(getPosition t), (getPosition nt)]
 
 turnRight :: TurtleStatus -> TurtleStatus
 turnRight ((Turtle pos angle), ds, st) = ((Turtle pos (angle + turnAngle)), ds, st)
@@ -95,11 +96,11 @@ foldDiagrams = foldr1 mappend
 
 diagram :: Diagram B
 diagram = foldDiagrams $ getDiagrams $ executeTurtleRules rs ((Turtle (0,0) 0), [], Stack [])
-  where rs = genGenerations 3 "F"
+  where rs = genGenerations numIterations "F"
 
 -- helpers
 renderToFile file width diagram = renderSVG file (mkWidth width) (diagram # frame 1)
-renderOut = renderToFile "out.svg" 100 diagram
+renderOut = renderToFile "out.svg" 400 diagram
 
 main = do
   renderOut
